@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Lamyae Ait Ouarab</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/project.css" />
+
+    <style>
+      .projects-page {
+        background: #fff;
+        color: #0b0b0b;
+      }
+
+      .projects-wrap {
+        width: min(100% - 48px, 1120px);
+        margin: 0 auto;
+      }
+
+      .projects-hero {
+        padding: 90px 0 40px;
+      }
+
+      .projects-kicker {
+        margin: 0 0 18px;
+        color: #2f5bff;
+        text-transform: uppercase;
+        letter-spacing: 0.32em;
+        font-weight: 700;
+        font-size: 12px;
+      }
+
+      .projects-title {
+        margin: 0;
+        font-size: clamp(42px, 6.5vw, 86px);
+        line-height: 0.95;
+        letter-spacing: -0.03em;
+        font-weight: 800;
+      }
+
+      .projects-title span {
+        color: #2f5bff;
+      }
+
+      .projects-subtitle {
+        margin: 22px 0 0;
+        max-width: 70ch;
+        font-size: 18px;
+        line-height: 1.7;
+        color: rgba(0, 0, 0, 0.68);
+      }
+
+      .projects-grid {
+        display: grid;
+        gap: 18px;
+        padding: 20px 0 90px;
+      }
+
+      .project-card {
+        display: grid;
+        grid-template-columns: 150px 1fr auto;
+        gap: 18px;
+        align-items: start;
+        padding: 24px;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        text-decoration: none;
+        color: inherit;
+        background: #fff;
+      }
+
+      .project-card:hover {
+        border-color: rgba(0, 0, 0, 0.3);
+        transform: translateY(-2px);
+        transition: 0.15s ease;
+      }
+
+      .project-number {
+        margin: 0;
+        color: #2f5bff;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        font-size: 12px;
+      }
+
+      .project-meta {
+        margin: 8px 0 0;
+        color: rgba(0, 0, 0, 0.55);
+        font-size: 13px;
+      }
+
+      .project-name {
+        margin: 0 0 8px;
+        font-size: clamp(22px, 2.4vw, 34px);
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        font-weight: 800;
+      }
+
+      .project-text {
+        margin: 0;
+        max-width: 72ch;
+        color: rgba(0, 0, 0, 0.68);
+        line-height: 1.7;
+      }
+
+      .project-cta {
+        align-self: center;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        font-size: 12px;
+        white-space: nowrap;
+      }
+
+      @media (max-width: 860px) {
+        .project-card {
+          grid-template-columns: 1fr;
+        }
+        .project-cta {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <a class="logo" href="index.html">LA.</a>
+
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html" class="active">Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <a
+          href="Files/Lamyae_Ait_Ouarab_CV_English.pdf"
+          class="cv-button"
+          download
+        >
+          Download CV
+        </a>
+      </nav>
+    </header>
+
+    <main class="projects-page">
+      <section class="projects-hero">
+        <div class="projects-wrap">
+          <p class="projects-kicker">SELECTED WORK</p>
+          <h1 class="projects-title">
+            Projects that connect<br />
+            <span>operations and data.</span>
+          </h1>
+          <p class="projects-subtitle">
+            A selection of work across supply chain planning, performance analysis,
+            automation and digital tools.
+          </p>
+        </div>
+      </section>
+
+      <section class="projects-wrap projects-grid">
+        <a class="project-card" href="projects/demand-forecast.html">
+          <div>
+            <p class="project-number">01</p>
+            <p class="project-meta">TE Connectivity · Planning</p>
+          </div>
+          <div>
+            <h2 class="project-name">Demand & Planning Monitoring</h2>
+            <p class="project-text">
+              Turning fragmented planning files into a structured monitoring
+              solution for demand, component requirements and production scheduling.
+            </p>
+          </div>
+          <div class="project-cta">VIEW →</div>
+        </a>
+
+        <a class="project-card" href="projects/delivery-risk.html">
+          <div>
+            <p class="project-number">02</p>
+            <p class="project-meta">Supply Chain · Risk</p>
+          </div>
+          <div>
+            <h2 class="project-name">Delivery Risk Analysis</h2>
+            <p class="project-text">
+              Identifying operational factors associated with late deliveries and
+              translating them into a clearer performance view.
+            </p>
+          </div>
+          <div class="project-cta">VIEW →</div>
+        </a>
+
+        <a class="project-card" href="projects/lean-six-sigma.html">
+          <div>
+            <p class="project-number">03</p>
+            <p class="project-meta">Lean Six Sigma · Analysis</p>
+          </div>
+          <div>
+            <h2 class="project-name">Supply Chain Delivery Performance Analysis</h2>
+            <p class="project-text">
+              Applying Lean Six Sigma and statistical analysis to late deliveries
+              across a large supply chain dataset.
+            </p>
+          </div>
+          <div class="project-cta">VIEW →</div>
+        </a>
+
+      </section>
+    </main>
+  </body>
+</html>
