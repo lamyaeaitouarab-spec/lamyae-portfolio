@@ -80,6 +80,8 @@
         </p>
 
     </div>
+</section>
+
 
 </div>
 
@@ -108,8 +110,7 @@
                         Python · Pandas · Scikit-learn · FastAPI · Streamlit
                     </p>
                 </div>
-            </div>
-        </section>
+            </section>
         <!-- =====================================================
              SECTION 01 — BUSINESS PROBLEM
              ===================================================== -->
@@ -316,115 +317,56 @@
 
 
 
-        <!-- =====================================================
-             SECTION 04 — GOING BEYOND SHIPPING MODE
-             ===================================================== -->
+<!-- =========================================
+04 / LOOKING BEYOND THE OBVIOUS
+========================================= -->
+<section class="project-section dataset-section" id="s04">
+  <!-- LEFT COLUMN: LABEL -->
+  <div class="project-section-label">
+    04 / LOOKING BEYOND THE OBVIOUS
+  </div>
 
-        <section class="risk-process">
+  <!-- RIGHT COLUMN: TITLE + TEXT + CARDS -->
+  <div class="project-section-content">
+    <h2>
+      What happens when we remove
+      <span>shipping configuration?</span>
+    </h2>
 
-    <div class="risk-process-intro">
-
-    <div class="risk-process-intro-header">
-
-        <p class="project-label">
-            LOOKING BEYOND THE OBVIOUS
-        </p>
-
-        <h2>
-            What happens when we remove
-            <span> shipping configuration?</span>
-        </h2>
-
-    </div>
-
-    <p class="risk-section-content risk-large-text">
-        Shipping mode clearly dominated the first model. We therefore tested a second approach
-        without delivery-configuration variables to understand which business characteristics were
-        carrying additional information.
+    <p class="risk-large-text">
+      Shipping mode clearly dominated the first model. We therefore tested a
+      second approach without delivery‑configuration variables to understand
+      which business characteristics were carrying additional information.
     </p>
 
-</div>
+    <!-- 4 STEP CARDS -->
+    <div class="tech-grid tech-grid--steps">
+      <article class="risk-analysis-card">
+        <span>01</span>
+        <strong>Full model</strong>
+        <p>Shipping mode and scheduled delivery time included in the feature set.</p>
+      </article>
 
+      <article class="risk-analysis-card">
+        <span>02</span>
+        <strong>Remove configuration</strong>
+        <p>Delivery‑configuration variables removed to neutralise their dominance.</p>
+      </article>
 
-    <div class="risk-process-flow">
+      <article class="risk-analysis-card">
+        <span>03</span>
+        <strong>Rebuild the model</strong>
+        <p>Random Forest retrained on the remaining business variables only.</p>
+      </article>
 
-        <div class="risk-process-step">
-
-            <span>01</span>
-
-            <strong>
-                Full model
-            </strong>
-
-            <p>
-                Shipping mode and scheduled delivery time
-                included.
-            </p>
-
-        </div>
-
-
-        <div class="risk-process-line"></div>
-
-
-        <div class="risk-process-step">
-
-            <span>02</span>
-
-            <strong>
-                Remove configuration
-            </strong>
-
-            <p>
-                Delivery-configuration variables removed
-                from the feature set.
-            </p>
-
-        </div>
-
-
-        <div class="risk-process-line"></div>
-
-
-        <div class="risk-process-step">
-
-            <span>03</span>
-
-            <strong>
-                Rebuild the model
-            </strong>
-
-            <p>
-                Random Forest trained on the remaining
-                business variables.
-            </p>
-
-        </div>
-
-
-        <div class="risk-process-line"></div>
-
-
-        <div class="risk-process-step">
-
-            <span>04</span>
-
-            <strong>
-                Interpret the drivers
-            </strong>
-
-            <p>
-                Feature importance grouped into
-                business dimensions.
-            </p>
-
-        </div>
-
+      <article class="risk-analysis-card">
+        <span>04</span>
+        <strong>Interpret the drivers</strong>
+        <p>Feature importance grouped into clear business dimensions.</p>
+      </article>
     </div>
-
+  </div>
 </section>
-
-
         <!-- =====================================================
              SECTION 05 — BUSINESS VARIABLES
              ===================================================== -->
@@ -720,7 +662,7 @@
                     <div class="ml-feature-image">
 
                         <img
-                            src="../images/random-forest-feature-importance.png"
+                            src="../random-forest-feature-importance.png"
                             alt="Random Forest feature importance analysis"
                         >
 
@@ -746,110 +688,112 @@
 
 </section>
         <!-- =====================================================
-             SECTION 07 — APPLICATION
-             ===================================================== -->
+     SECTION 07 — APPLICATION
+     ===================================================== -->
 
-        <section class="risk-process">
+<section class="risk-process">
 
-            <div class="risk-process-intro">
+    <div class="risk-process-intro-new">
 
-    <div class="risk-process-intro-header">
-
-        <p class="project-label">
+        <!-- LEFT COLUMN -->
+        <div class="risk-process-label">
             FROM MODEL TO APPLICATION
-        </p>
+        </div>
 
-        <h2>
-            A prediction is useful
-            <span>only when it can be used.</span>
-        </h2>
+        <!-- RIGHT COLUMN -->
+        <div class="risk-process-right">
+
+            <h2>
+                A prediction is useful <span>only when it can be used.</span>
+            </h2>
+
+            <p class="risk-large-text">
+                The final step was to move the model outside the notebook and integrate it into an
+                application that can analyse new orders.
+            </p>
+
+        </div>
 
     </div>
 
-    <p class="risk-section-content risk-large-text">
-        The final step was to move the model outside the notebook and integrate it into an
-        application that can analyse new orders.
-    </p>
 
-</div>
+    <div class="risk-process-flow">
 
-            <div class="risk-process-flow">
+        <div class="risk-process-step">
 
-                <div class="risk-process-step">
+            <span>01</span>
 
-                    <span>01</span>
+            <strong>
+                Upload data
+            </strong>
 
-                    <strong>
-                        Upload data
-                    </strong>
+            <p>
+                New order data can be introduced through
+                the application.
+            </p>
 
-                    <p>
-                        New order data can be introduced through
-                        the application.
-                    </p>
-
-                </div>
+        </div>
 
 
-                <div class="risk-process-line"></div>
+        <div class="risk-process-line"></div>
 
 
-                <div class="risk-process-step">
+        <div class="risk-process-step">
 
-                    <span>02</span>
+            <span>02</span>
 
-                    <strong>
-                        FastAPI
-                    </strong>
+            <strong>
+                FastAPI
+            </strong>
 
-                    <p>
-                        The API receives the order information and
-                        sends it to the trained model.
-                    </p>
+            <p>
+                The API receives the order information and
+                sends it to the trained model.
+            </p>
 
-                </div>
-
-
-                <div class="risk-process-line"></div>
+        </div>
 
 
-                <div class="risk-process-step">
-
-                    <span>03</span>
-
-                    <strong>
-                        Prediction
-                    </strong>
-
-                    <p>
-                        The Random Forest estimates the probability
-                        of late delivery.
-                    </p>
-
-                </div>
+        <div class="risk-process-line"></div>
 
 
-                <div class="risk-process-line"></div>
+        <div class="risk-process-step">
+
+            <span>03</span>
+
+            <strong>
+                Prediction
+            </strong>
+
+            <p>
+                The Random Forest estimates the probability
+                of late delivery.
+            </p>
+
+        </div>
 
 
-                <div class="risk-process-step">
+        <div class="risk-process-line"></div>
 
-                    <span>04</span>
 
-                    <strong>
-                        Decision support
-                    </strong>
+        <div class="risk-process-step">
 
-                    <p>
-                        The probability is translated into a risk
-                        level and an operational recommendation.
-                    </p>
+            <span>04</span>
 
-                </div>
+            <strong>
+                Decision support
+            </strong>
 
-            </div>
+            <p>
+                The probability is translated into a risk
+                level and an operational recommendation.
+            </p>
 
-        </section>
+        </div>
+
+    </div>
+
+</section>
 
 
 
@@ -1013,83 +957,65 @@
 
                 <div class="risk-process-flow">
 
-                    <div class="risk-process-step">
+    <div class="risk-process-step">
+        <span>01</span>
 
-                        <span>01</span>
+        <strong>
+            Order characteristics
+        </strong>
 
-                        <strong>
-                            Order characteristics
-                        </strong>
-
-                        <p>
-                            Commercial, product, customer and
-                            delivery information.
-                        </p>
-
-                    </div>
+        <p>
+            Commercial, product, customer and
+            delivery information.
+        </p>
+    </div>
 
 
-                    <div class="risk-process-line"></div>
+    <div class="risk-process-step">
+        <span>02</span>
+
+        <strong>
+            ML prediction
+        </strong>
+
+        <p>
+            Estimated probability of late delivery.
+        </p>
+    </div>
 
 
-                    <div class="risk-process-step">
+    <div class="risk-process-step">
+        <span>03</span>
 
-                        <span>02</span>
+        <strong>
+            Risk level
+        </strong>
 
-                        <strong>
-                            ML prediction
-                        </strong>
-
-                        <p>
-                            Estimated probability of late delivery.
-                        </p>
-
-                    </div>
+        <p>
+            Low, Medium, High or Critical.
+        </p>
+    </div>
 
 
-                    <div class="risk-process-line"></div>
+    <div class="risk-process-step">
+        <span>04</span>
 
+        <strong>
+            Recommendation
+        </strong>
 
-                    <div class="risk-process-step">
+        <p>
+            A clear indication of the level of
+            intervention required.
+        </p>
+    </div>
 
-                        <span>03</span>
-
-                        <strong>
-                            Risk level
-                        </strong>
-
-                        <p>
-                            Low, Medium, High or Critical.
-                        </p>
-
-                    </div>
-
-
-                    <div class="risk-process-line"></div>
-
-
-                    <div class="risk-process-step">
-
-                        <span>04</span>
-
-                        <strong>
-                            Recommendation
-                        </strong>
-
-                        <p>
-                            A clear indication of the level of
-                            intervention required.
-                        </p>
-
-                    </div>
-
-                </div>
-
+</div>
 
                 <div class="risk-visual-placeholder">
 
     <img 
-    src="../images/delivery-risk-app.png"
+    src="../delivery-risk-app.png"
     alt="AI Delivery Risk Assistant application"
 >
 
@@ -1142,7 +1068,10 @@
 
         </section>
 
-
+<section class="project-next">
+  <a href="../projects.html">← Back to projects</a>
+  <a href="lean-six-sigma.html">Next project →</a>
+</section>
     </main>
 
 
@@ -1157,9 +1086,7 @@
             © 2026 Lamyae Ait Ouarab
         </p>
 
-        <a href="../projects.html">
-            ← Back to Projects
-        </a>
+        
 
     </footer>
 
