@@ -91,7 +91,158 @@
              ===================================================== -->
 
         <section class="project-section define-section">
+            <style>
+/* =========================================================
+   01 · DEFINE — BALANCED SPACING (FORCE OVERRIDE)
+   ========================================================= */
 
+/* 1. Section outer padding */
+.define-section {
+    padding: 35px 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    row-gap: 22px !important;
+}
+
+/* 2. Heading block */
+.define-section > .section-heading {
+    padding-bottom: 12px !important;
+    margin-bottom: 0 !important;
+}
+
+.define-section .section-heading h2 {
+    margin-bottom: 24px !important;   /* Gap between title & paragraph */
+    line-height: 1.05 !important;
+}
+
+.define-section .section-heading p {
+    margin-bottom: 0 !important;
+    line-height: 1.5 !important;
+    max-width: 760px !important;
+}
+
+/* 3. Middle block */
+.define-section > .define-content {
+    margin-top: 0 !important;
+    padding-top: 22px !important;
+}
+
+.define-section .content-label {
+    margin-bottom: 10px !important;
+}
+
+.define-section .define-content p {
+    line-height: 1.5 !important;
+    max-width: 520px !important;
+}
+
+/* 4. Bottom block */
+.define-section > .business-question {
+    margin-top: 0 !important;
+    padding-top: 22px !important;
+}
+
+.define-section .business-question h3 {
+    margin-bottom: 18px !important;
+    line-height: 1.15 !important;
+}
+
+.define-section .business-question p {
+    line-height: 1.5 !important;
+}
+/* =========================================================
+   01 · DEFINE — EXTRA SPACE (FORCE OVERRIDE)
+   ========================================================= */
+
+.define-section .section-heading h2 {
+    margin-bottom: 32px !important; 
+    display: block !important;
+}
+
+.define-section .define-content .content-label,
+.define-section .define-objective .content-label {
+    margin-bottom: 14px !important;
+    display: block !important;
+}
+
+.define-section .business-question h3 {
+    margin-bottom: 22px !important;
+    display: block !important;
+}
+/* =========================================================
+   01 · DEFINE — FIX INTERLINE BETWEEN TITLE AND TEXT
+   ========================================================= */
+
+/* 1. Reduce tight interline on H2 (was causing the visual overlap) */
+.define-section .section-heading h2 {
+    line-height: 1.1 !important;  /* Slight breathing room inside title */
+    padding-bottom: 10px !important;  /* Push text below downward */
+    margin-bottom: 18px !important;
+}
+
+/* 2. Add padding-top to the paragraph below the title */
+.define-section .section-heading p {
+    margin-top: 10px !important;
+    line-height: 1.5 !important;
+}
+
+/* 3. Same fix for BUSINESS QUESTION title */
+.define-section .business-question h3 {
+    line-height: 1.2 !important;
+    padding-bottom: 8px !important;
+    margin-bottom: 18px !important;
+}
+
+/* 4. Push paragraph below H3 downward */
+.define-section .business-question p {
+    margin-top: 8px !important;
+}
+/* =========================================================
+   01 · DEFINE — SPACING FIXES & REDUCE QUESTION SIZE
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1. BUSINESS CONTEXT & OBJECTIVE
+   --------------------------------------------------------- */
+.define-section .define-content .content-label {
+    display: block !important;
+    padding-bottom: 6px !important;  /* Space under label */
+    margin-bottom: 4px !important;
+}
+
+.define-section .define-content p {
+    margin-top: 6px !important;       /* Push text down slightly */
+    line-height: 1.5 !important;
+}
+
+
+/* ---------------------------------------------------------
+   2. BUSINESS QUESTION (REDUCE SIZE + FIX SPACING)
+   --------------------------------------------------------- */
+
+/* Label ("BUSINESS QUESTION") */
+.define-section .business-question .content-label {
+    display: block !important;
+    padding-bottom: 6px !important;
+    margin-bottom: 4px !important;
+}
+
+/* Question Title (Shrunk from 42px to ~26px) */
+.define-section .business-question h3 {
+    font-size: clamp(22px, 2.5vw, 28px) !important; /* <--- REDUCED FONT SIZE */
+    font-weight: 600 !important;
+    line-height: 1.25 !important;                   /* Comfortable interline */
+    margin-top: 6px !important;
+    margin-bottom: 12px !important;
+    padding-bottom: 4px !important;
+}
+
+/* Paragraph below the question */
+.define-section .business-question p {
+    margin-top: 8px !important;
+    line-height: 1.5 !important;
+}
+</style>
             <div class="section-label">
                 01 · DEFINE
             </div>
@@ -180,10 +331,7 @@
 
             <div class="section-heading">
 
-                <h2>
-                    The problem,
-                    <span>measured.</span>
-                </h2>
+                <h2>The problem, <span style="font-size: inherit !important; font-weight: inherit !important; color: #2563eb !important; display: inline !important; text-transform: none !important;">measured.</span></h2>
 
                 <p>
                     The delivery problem was quantified across 180,519 supply
@@ -600,39 +748,23 @@
 
         <div class="fishbone-block">
 
-            <div class="visual-header">
+    <div class="visual-header">
+        <span>VISUAL 01</span>
+        <strong>FISHBONE DIAGRAM</strong>
+    </div>
 
-                <span>
-                    VISUAL 01
-                </span>
+    <!-- UPDATE THIS LINE BELOW (Added ../) -->
+    <div class="fishbone-image-container">
+        <img src="../fishbone.png" alt="Fishbone Root Cause Analysis Diagram" class="fishbone-img">
+    </div>
 
-                <strong>
-                    FISHBONE DIAGRAM
-                </strong>
-
-            </div>
-
-            <div class="visual-placeholder large">
-
-                <span>
-                    FISHBONE DIAGRAM
-                </span>
-
-                <p>
-                    Insert the final Fishbone / Ishikawa diagram here.
-                    The visual should connect the observed delivery
-                    problem with its potential operational causes.
-                </p>
-
-            </div>
-
-        </div>
+</div>
 
     </div>
 
-</section> 
-        <!-- =====================================================
-             5 WHYS
+</section>
+                <!-- =====================================================
+             05.1 / 5 WHYS
              ===================================================== -->
 
         <section class="project-section five-whys-section">
@@ -656,77 +788,58 @@
 
             </div>
 
+            <!-- Problem Statement -->
+            <div class="whys-problem-card">
+                <span class="content-label">PROBLEM STATEMENT</span>
+                <p>Late deliveries occur frequently across supply chain transactions.</p>
+            </div>
+
+            <!-- 5 Whys Chain -->
             <div class="five-whys">
 
                 <article>
-
-                    <span>
-                        WHY 01
-                    </span>
-
-                    <p>
-                        Why are some orders delivered late?
-                    </p>
-
+                    <span>WHY 01</span>
+                    <strong>Why do late deliveries occur frequently?</strong>
+                    <p>Because shipments are not always delivered within the scheduled time.</p>
                 </article>
 
                 <article>
-
-                    <span>
-                        WHY 02
-                    </span>
-
-                    <p>
-                        Why does actual delivery duration exceed the planned
-                        duration?
-                    </p>
-
+                    <span>WHY 02</span>
+                    <strong>Why are shipments not delivered within scheduled time?</strong>
+                    <p>Because some shipping modes experience longer transportation times than others.</p>
                 </article>
 
                 <article>
-
-                    <span>
-                        WHY 03
-                    </span>
-
-                    <p>
-                        Why are operational conditions not always aligned with
-                        the original delivery plan?
-                    </p>
-
+                    <span>WHY 03</span>
+                    <strong>Why do transportation times vary by shipping mode?</strong>
+                    <p>Because transportation planning and carrier performance are inconsistent.</p>
                 </article>
 
                 <article>
-
-                    <span>
-                        WHY 04
-                    </span>
-
-                    <p>
-                        Why is delivery risk not identified early enough?
-                    </p>
-
+                    <span>WHY 04</span>
+                    <strong>Why is carrier performance inconsistent?</strong>
+                    <p>Because shipping performance is not continuously monitored using standardized KPIs.</p>
                 </article>
 
                 <article>
-
-                    <span>
-                        WHY 05
-                    </span>
-
-                    <p>
-                        Why is there limited proactive control before a delay
-                        becomes visible?
-                    </p>
-
+                    <span>WHY 05</span>
+                    <strong>Why is performance not monitored?</strong>
+                    <p>Because improvement actions are reactive rather than based on continuous performance monitoring.</p>
                 </article>
 
             </div>
 
+            <!-- Identified Root Cause Outcome -->
+            <div class="root-cause-card">
+                <span class="content-label">ROOT CAUSE</span>
+                <p>Lack of standardized monitoring and continuous evaluation of shipping performance.</p>
+            </div>
+
         </section>
 
+
         <!-- =====================================================
-             FMEA
+             05.2 / FMEA
              ===================================================== -->
 
         <section class="dark-section fmea-section">
@@ -745,72 +858,159 @@
                     </h2>
 
                     <p>
-                        FMEA was used as a prioritization framework to evaluate
-                        the potential operational failure modes identified
-                        during the root cause analysis.
+                        The purpose of the FMEA is to identify potential failures in the supply chain process,
+                        assess their impact, and prioritize improvement actions using the Risk Priority Number (RPN).
                     </p>
 
                 </div>
 
-                <div class="fmea-table">
-
-                    <div class="fmea-header">
-
-                        <span>FAILURE MODE</span>
-                        <span>SEVERITY</span>
-                        <span>OCCURRENCE</span>
-                        <span>DETECTION</span>
-                        <span>RPN</span>
-
+                <!-- Formula Card -->
+                <div class="rpn-formula-box">
+                    <div class="formula-head">
+                        <span class="formula-title">RISK PRIORITY NUMBER (RPN)</span>
+                        <strong class="formula-badge">RPN = Severity (S) × Occurrence (O) × Detection (D)</strong>
                     </div>
-
-                    <div class="fmea-row">
-
-                        <strong>
-                            Delivery planning deviation
-                        </strong>
-
-                        <span>—</span>
-                        <span>—</span>
-                        <span>—</span>
-                        <span>—</span>
-
+                    <div class="formula-scale">
+                        <div><span>Severity (S):</span> Impact of failure (1 = Very Low, 10 = Very High)</div>
+                        <div><span>Occurrence (O):</span> Frequency of failure (1 = Rare, 10 = Very Frequent)</div>
+                        <div><span>Detection (D):</span> Difficulty to detect before reaching customer (1 = Easily Detected, 10 = Hard to Detect)</div>
                     </div>
-
-                    <div class="fmea-row">
-
-                        <strong>
-                            Shipping mode mismatch
-                        </strong>
-
-                        <span>—</span>
-                        <span>—</span>
-                        <span>—</span>
-                        <span>—</span>
-
-                    </div>
-
-                    <div class="fmea-row">
-
-                        <strong>
-                            Insufficient delivery monitoring
-                        </strong>
-
-                        <span>—</span>
-                        <span>—</span>
-                        <span>—</span>
-                        <span>—</span>
-
-                    </div>
-
                 </div>
 
-                <p class="note">
-                    RPN values should be inserted from the original FMEA
-                    assessment rather than estimated.
-                </p>
+                <!-- Full FMEA Table -->
+                <div class="fmea-table-wrapper">
+                    <table class="fmea-table">
+                        <thead>
+                            <tr>
+                                <th>Process Step</th>
+                                <th>Failure Mode</th>
+                                <th>Possible Effect</th>
+                                <th>Possible Cause</th>
+                                <th class="num-col">S</th>
+                                <th class="num-col">O</th>
+                                <th class="num-col">D</th>
+                                <th class="num-col">RPN</th>
+                                <th>Recommended Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row-highlight">
+                                <td><strong>Transportation</strong></td>
+                                <td>Carrier delay</td>
+                                <td>Late delivery</td>
+                                <td>Traffic, carrier performance</td>
+                                <td class="num-col">9</td>
+                                <td class="num-col">7</td>
+                                <td class="num-col">5</td>
+                                <td class="num-col"><span class="rpn-tag critical">315</span></td>
+                                <td>Monitor carrier KPIs and evaluate performance regularly</td>
+                            </tr>
+                            <tr class="row-highlight">
+                                <td><strong>Performance Monitoring</strong></td>
+                                <td>Delays not detected early</td>
+                                <td>Repeated operational issues</td>
+                                <td>Lack of KPI monitoring</td>
+                                <td class="num-col">8</td>
+                                <td class="num-col">6</td>
+                                <td class="num-col">6</td>
+                                <td class="num-col"><span class="rpn-tag critical">288</span></td>
+                                <td>Implement real-time dashboards and KPI reviews</td>
+                            </tr>
+                            <tr class="row-highlight">
+                                <td><strong>Shipping Mode Selection</strong></td>
+                                <td>Inappropriate shipping mode</td>
+                                <td>Increased delivery time</td>
+                                <td>Wrong carrier/service selection</td>
+                                <td class="num-col">9</td>
+                                <td class="num-col">6</td>
+                                <td class="num-col">5</td>
+                                <td class="num-col"><span class="rpn-tag critical">270</span></td>
+                                <td>Review shipping mode selection criteria</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Order Scheduling</strong></td>
+                                <td>Poor scheduling</td>
+                                <td>Delivery delay</td>
+                                <td>Inefficient planning</td>
+                                <td class="num-col">8</td>
+                                <td class="num-col">7</td>
+                                <td class="num-col">4</td>
+                                <td class="num-col"><span class="rpn-tag medium">224</span></td>
+                                <td>Improve production and shipment planning</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Inventory Preparation</strong></td>
+                                <td>Stock shortage</td>
+                                <td>Shipment postponed</td>
+                                <td>Inventory inaccuracies</td>
+                                <td class="num-col">8</td>
+                                <td class="num-col">5</td>
+                                <td class="num-col">4</td>
+                                <td class="num-col"><span class="rpn-tag medium">160</span></td>
+                                <td>Improve inventory planning and stock visibility</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Order Processing</strong></td>
+                                <td>Data entry errors</td>
+                                <td>Shipping errors</td>
+                                <td>Human mistakes</td>
+                                <td class="num-col">6</td>
+                                <td class="num-col">4</td>
+                                <td class="num-col">3</td>
+                                <td class="num-col"><span class="rpn-tag low">72</span></td>
+                                <td>Employee training and process standardization</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-            </div>
+                <!-- =====================================================
+     FMEA INTERPRETATION — HORIZONTAL INSIGHT GRID
+     ===================================================== -->
+
+<div class="fmea-interpretation-grid">
+
+    <!-- Card 1: Top RPN Risks -->
+    <div class="interp-card critical-card">
+        <span class="interp-label red">TOP RPN DRIVERS</span>
+        <h4>Critical Risk Areas</h4>
+        <ul class="rpn-mini-list">
+            <li>
+                <span>Transportation</span>
+                <strong class="rpn-badge-sm critical">315</strong>
+            </li>
+            <li>
+                <span>Performance Monitoring</span>
+                <strong class="rpn-badge-sm critical">288</strong>
+            </li>
+            <li>
+                <span>Shipping Selection</span>
+                <strong class="rpn-badge-sm critical">270</strong>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Card 2: Immediate Focus -->
+    <div class="interp-card focus-card">
+        <span class="interp-label blue">STRATEGIC FOCUS</span>
+        <h4>Primary Implementation</h4>
+        <p>
+            Improvement efforts concentrate immediately on carrier evaluation, real-time KPI monitoring, and refining shipping mode selection criteria.
+        </p>
+    </div>
+
+    <!-- Card 3: Secondary Mitigation -->
+    <div class="interp-card secondary-card">
+        <span class="interp-label gray">SECONDARY PHASE</span>
+        <h4>Lower-Priority Risks</h4>
+        <p>
+            Secondary issues such as data entry errors (RPN = 72) represent low operational risk and will be addressed after critical bottlenecks are resolved.
+        </p>
+    </div>
+
+</div>
+
+         
 
         </section>
 
@@ -1037,6 +1237,9 @@
             </div>
 
         </section>
+        <section class="project-next project-next--single">
+  <a href="../projects.html">← Back to projects</a>
+</section>
 
     </main>
 
@@ -1050,12 +1253,11 @@
             © 2026 Lamyae Ait Ouarab
         </p>
 
-        <a href="../projects.html">
-            ← Back to Projects
-        </a>
+        
 
     </footer>
 
 </body>
 
 </html>
+
